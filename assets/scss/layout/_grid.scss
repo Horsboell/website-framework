@@ -2,16 +2,19 @@
 	display: flex;
 	flex-wrap: wrap;
 
-	&.fb-vmiddle {
-		align-items: center;
-	}
-	&.fb-stretch {
-		align-items: stretch;
-	}
-
 	// Children
 	> * {
-		flex: 1 0 auto;
+		flex: 0 0 auto;
+	}
+
+	&.fb-jcenter {justify-content: center;}
+	&.fb-vmiddle {align-items: center;}
+	&.fb-end {align-items: flex-end;}
+	&.fb-stretch {align-items: stretch;}
+	&.fb-flex {
+		> * {
+			flex: 1 0 auto;
+		}
 	}
 
 	@include mq-to($phone) {
