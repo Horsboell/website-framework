@@ -1,5 +1,5 @@
 @mixin mq-to($media) {
-	@media only screen and (max-width: #{$media}) {
+	@media only screen and (max-width: #{$media}) { // Usage @include mq-to($phone)
 		@content;
 	}
 }
@@ -21,9 +21,9 @@
 }
 
 @function tint($color, $percentage) {
-	@return mix(white, $color, $percentage);
+	@return mix(white, $color, $percentage); // Usage tint(red,20%)
 }
 
 @function shade($color, $percentage) {
-  @return mix(black, $color, $percentage);
+  @return mix(black, $color, $percentage); // Usage shade(red,20%)
 }
